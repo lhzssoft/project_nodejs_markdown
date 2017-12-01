@@ -1,6 +1,6 @@
 <template>
-  <div id='app'>
-    <c-toolbar ref='toolbar' :style='{height:height}'></c-toolbar>
+  <div id='app'  :style='{height:height}'>
+    <c-toolbar ref='toolbar'></c-toolbar>
     <c-container height='cHeight'></c-container>
   </div>
 </template>
