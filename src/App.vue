@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import Toolbar from '@/components/Toolbar'
-  import Container from '@/components/Container'
+  import Toolbar from './components/Toolbar'
+  import Container from './components/Container'
 
   export default {
     name: 'app',

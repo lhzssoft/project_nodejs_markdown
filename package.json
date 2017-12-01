@@ -1,8 +1,8 @@
 {
-  "name": "my-project",
+  "name": "foo-markdown",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "google <google@microsoft.com>",
+  "author": "helloworld <hello@world.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --port 8010",

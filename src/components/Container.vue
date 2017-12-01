@@ -49,6 +49,7 @@
       border-left-color: #F6F6F6
       padding-left: 20px
       padding-top : 10px
+      padding-bottom : 10px
     .c-left
       width : 50%
       height : 100%
