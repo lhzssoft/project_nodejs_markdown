@@ -1,5 +1,5 @@
 <template>
-  <div class='c-container' :style='{height:height}'>
+  <div class='c-container'>
       <c-textarea class='c-left' autofocus fontSize='16px' lineHeight='1.5' :value='value' :onchange='change'></c-textarea>
       <div class='c-right markdown-body' v-html='html'></div>
   </div>
@@ -14,15 +14,12 @@
   import 'highlight.js/styles/googlecode.css'
 
   export default {
-    props:[
-      'height'
-    ] ,
     name: 'Container',
     components : { 'c-textarea' : autoTextarea.default } ,
     data () {
       return {
         value: '' ,
-        html: ''
+        html: '',
       } ;
     } ,
     computed: {
@@ -31,6 +28,8 @@
       change(v) {
         this.html = marked(  v, { sanitize: true,highlight: (code) => highlightjs.highlightAuto(code).value  });
       }
+    },
+    mounted(){
     }
   }
 </script>

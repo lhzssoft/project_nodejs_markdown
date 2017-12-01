@@ -1,7 +1,7 @@
 <template>
   <div id='app'  :style='{height:height}'>
-    <c-toolbar ref='toolbar'></c-toolbar>
-    <c-container height='cHeight'></c-container>
+    <c-toolbar></c-toolbar>
+    <c-container class='c-height'></c-container>
   </div>
 </template>
 
@@ -12,25 +12,26 @@
   export default {
     name: 'app',
     components: { 'c-toolbar' : Toolbar , 'c-container' : Container } ,
-    props:[
+    props: [
       'height'
     ],
     data(){
       return {
-        cHeight : ''
       } ;
     } ,
-    mounted(){
-      let foo = this.$refs.toolbar.offsetHeight ;
-      this.cHeight = `calc(100% - ${foo}px)` ;
+    beforeCreate(){
+
     }
   }
 </script>
 
-<style lang='stylus' scoped>
-  #app
-  //   height : 100%
-  //   margin : 0
-    box-sizing: border-box
+<style scoped>
+  #app {
+      box-sizing: border-box
+  }
+
+  .c-height {
+    height : calc(100% - 38px - 1px) ;
+  }
 
 </style>
