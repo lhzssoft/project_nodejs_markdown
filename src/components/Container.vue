@@ -1,5 +1,5 @@
 <template>
-  <div class='c-container'>
+  <div class='c-container' :style='{height:height}'>
       <c-textarea class='c-left' autofocus fontSize='16px' lineHeight='1.5' :value='value' :onchange='change'></c-textarea>
       <div class='c-right markdown-body' v-html='html'></div>
   </div>
@@ -14,6 +14,9 @@
   import 'highlight.js/styles/googlecode.css'
 
   export default {
+    props:[
+      'height'
+    ] ,
     name: 'Container',
     components : { 'c-textarea' : autoTextarea.default } ,
     data () {
@@ -37,7 +40,6 @@
 
   .c-container
     display : flex
-    height : calc(100% - 59px)
     box-sizing : border-box
     margin : 0 20px 20px 20px
     .c-right
