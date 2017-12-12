@@ -22,14 +22,10 @@ const webpackConfig = merge(baseWebpackConfig, {
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
-    // path: config.build.assetsRoot,
-    // filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    // chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
-
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/',
-    filename: '[name].js',
+    path: config.build.assetsRoot,
+    filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
+
     library: 'foo-markdown',
     libraryTarget: 'umd',
     umdNamedDefine: true
