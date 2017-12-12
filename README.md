@@ -1,4 +1,4 @@
-# my-project
+# foo-markdown
 
 > A Vue.js project
 
