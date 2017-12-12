@@ -19,6 +19,7 @@
     data () {
       return {
         value: '' ,
+        text:'',
         html: '',
       } ;
     } ,
@@ -27,6 +28,7 @@
     methods : {
       change(v) {
         this.html = marked(  v, { sanitize: true,highlight: (code) => highlightjs.highlightAuto(code).value  });
+        this.text = v ;
       }
     },
     mounted(){

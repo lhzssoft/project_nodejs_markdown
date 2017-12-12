@@ -1,7 +1,7 @@
 <template>
   <ul>
-    <li v-for='(e,i) in iconOptions' :key='i' >
-      <button><i  v-bind:class="['iconfont', e.class]"></i></button>
+    <li v-for='(e,i) in iconOptions' :key='i' :data-class='e.class' @click='onClick'>
+      <button v-bind:class="['iconfont', e.class]"></button>
     </li>
   </ul>
 </template>
@@ -27,6 +27,48 @@
         ] ,
       } ;
     } ,
+    methods : {
+      onClick(event) {
+        let foo = event.target.className ; // 'iconfont icon-header'
+
+        if( 0 <= foo.indexOf('icon-header'))
+          this.$emit('toolbarClick','\n# ') ;
+
+        if( 0 <= foo.indexOf('icon-bold'))
+          this.$emit('toolbarClick','****', -2) ;
+
+        if( 0 <= foo.indexOf('icon-italic'))
+          this.$emit('toolbarClick','**', -1) ;
+
+        if(  0 <= foo.indexOf('icon-underline'))
+          this.$emit('toolbarClick','~~~~', -2) ;
+
+        if(  0 <= foo.indexOf('icon-quotes'))
+          this.$emit('toolbarClick','>') ;
+
+        if(  0 <= foo.indexOf('icon-code'))
+          this.$emit('toolbarClick','```\n\n```', -3-1) ;
+
+        if(  0 <= foo.indexOf('icon-list'))
+          this.$emit('toolbarClick','+ ') ;
+
+        if(  0 <= foo.indexOf('icon-table'))
+          this.$emit('toolbarClick','| Tables        | Are           | Cool  |\n'
+                                   +'| ------------- |:-------------:| -----:|\n'
+                                   +'| col 1 is      | centered      |   $11 |\n'
+                                   +'| col 2 is      | centered      |   $12 |'
+          ) ;
+
+        if( 0 <= foo.indexOf('icon-link'))
+          this.$emit('toolbarClick', '[]()' , 0-']()'.length);
+
+        if( 0 <= foo.indexOf('icon-image'))
+          this.$emit('toolbarClick', '![]()', 0-']()'.length);
+
+        if( 0 <= foo.indexOf('icon-save'))
+          this.$emit('save');
+      }
+    }
   }
 </script>
 
