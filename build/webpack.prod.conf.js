@@ -29,6 +29,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
     filename: '[name].js',
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
     library: 'foo-markdown',
     libraryTarget: 'umd',
     umdNamedDefine: true
