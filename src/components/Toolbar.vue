@@ -44,7 +44,7 @@
           this.$emit('toolbarClick','~~~~', -2) ;
 
         if(  0 <= foo.indexOf('icon-quotes'))
-          this.$emit('toolbarClick','> ') ;
+          this.$emit('toolbarClick','\n> ') ;
 
         if(  0 <= foo.indexOf('icon-code'))
           this.$emit('toolbarClick','```\n\n```', -3-1) ;

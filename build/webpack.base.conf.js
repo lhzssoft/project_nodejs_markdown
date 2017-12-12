@@ -71,7 +71,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|svg|woff|eot|ttf|otf)(\?.*)?$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         // options: {
         //   limit: 10000,
         //   name: utils.assetsPath('fonts/[name].[hash:7].[ext]')

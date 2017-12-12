@@ -2,6 +2,7 @@
   "name": "foo-markdown",
   "version": "1.0.0",
   "description": "A Vue.js project",
+  "main": "./src/App.vue",
   "author": "helloworld <hello@world.com>",
   "private": true,
   "scripts": {
