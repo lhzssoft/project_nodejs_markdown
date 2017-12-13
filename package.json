@@ -2,9 +2,9 @@
   "name": "foo-markdown",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "main": "./src/App.vue",
+  "main": "dist/app.js",
   "author": "helloworld <hello@world.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --port 8010",
     "start": "npm run dev",
